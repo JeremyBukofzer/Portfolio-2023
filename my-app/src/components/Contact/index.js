@@ -34,7 +34,7 @@ function Contact() {
                 setErrMessage('');
             }
         }
-        is (!errMessage) {
+        if (!errMessage) {
             setFormState({ ...formState, [event.target.name]: event.target.value });
             console.log('Handle Form', formState);
         }
@@ -42,12 +42,44 @@ function Contact() {
 
     return (
         <section>
-            <form id="contact-form" onSubmit={}>
+            <form id="contact-form" onSubmit={handleSubmit}>
                 <div>
-                    
+                    <label htmlFor="name">Name:</label>
+                    <input 
+                    type="text"
+                    name="name"
+                    defaultvalue={name}
+                    onBlur={handleChange}
+                    />
                 </div>
+                <div>
+                    <label htmlFor="email">Email:</label>
+                    <input 
+                    type="email"
+                    name="email"
+                    defaultvalue={email}
+                    onBlur={handleChange}
+                    />
+                </div>
+                <div>
+                    <label htmlFor="message">Message:</label>
+                    <textarea
+                    name="message"
+                    rows="8"
+                    defaultValue={message}
+                    onBlur={handleChange}
+                    />
+                </div>
+                {errMessage && (
+                    <div>
+                        <p className="err-msg">{errMessage}</p>
+                    </div>
+                )}
+                <button type="submit">Submit</button>
 
             </form>
         </section>
-    )
+    );
 }
+
+export default Contact
