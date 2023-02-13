@@ -10,7 +10,7 @@ function Project({ project }) {
             <div className="project-info">
                 <h2>
                     <a href={link}>{name}</a>
-                    <a href={repo}></a>
+                    <a href={repository}></a>
                 </h2>
                 <p>{description}</p>
             </div>
