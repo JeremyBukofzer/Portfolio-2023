@@ -1,32 +1,14 @@
-import React, { useEffect } from "react";
+import React from 'react';
 
-function Nav(props) {
-    const {
-        pages = [],
-        setCurrentPage,
-        currentPage,
-    } = props;
+function Header(props) {
 
-    return (
-        <nav>
-            <ul className="flex-row">
-                {pages.map((Page) => (
-                    <li className={`mx-5 ${
-                        currentPage.name === Page.name && 'navActive'
-                    }`}
-                    key={Page.name}
-                    >
-                        <span
-                        onClick={() => setCurrentPage(Page)}
-                        >
-                            {(Page.name)}
-                        </span>
-                    </li>
-                ))}
+  return (
+    <header className="flex-row space-between px-1">
+      <h1>Lernantino</h1>
+      <img src={coverImage} alt="wooden background"></img>
+      {props.children}
+    </header>
+  );
+}
 
-            </ul>
-        </nav>
-    )
-}   
-
-export default Nav;
+export default Header;
