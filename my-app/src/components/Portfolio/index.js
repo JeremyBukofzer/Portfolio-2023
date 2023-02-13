@@ -1,21 +1,47 @@
-import React from "react";
+import React, { useState } from "react";
+import Project from "../Project";
 
-function Project({ project }) {
-    const { name, repository, link, description } =project;
+function Portfolio() {
+
+    const [projects] = useState([
+        {
+            name: "",
+            link: "",
+            repository: "",
+            desciption: ""
+        },
+        {
+            name: "",
+            link: "",
+            repository: "",
+            desciption: ""
+        },
+        {
+            name: "",
+            link: "",
+            repository: "",
+            desciption: ""
+        },
+        {
+            name: "",
+            link: "",
+            repository: "",
+            desciption: ""
+        },
+    ])
 
     return (
-        <div className="project" key={name}>
-            {/* <img image goes here /> */}
-
-            <div className="project-info">
-                <h2>
-                    <a href={link}>{name}</a>
-                    <a href={repository}></a>
-                </h2>
-                <p>{description}</p>
+        <div>
+            <div className="flex-row">
+                {projects.map((project, id) => (
+                    <Project
+                        project={project}
+                        key={"prroject" + id}
+                    />
+                ))}
             </div>
         </div>
     )
 }
 
-export default Project;
+export default Portfolio;
