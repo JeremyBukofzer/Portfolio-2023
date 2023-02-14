@@ -10,7 +10,9 @@ function Project({ project }) {
             <div className="project-info">
                 <h2>
                     <a href={link}>{name}</a>
-                    <a href={repository}></a>
+                    <a href={repository}>
+                        <i className="fab fa-github"></i>
+                    </a>
                 </h2>
                 <p>{description}</p>
             </div>
