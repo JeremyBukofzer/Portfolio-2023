@@ -9,15 +9,15 @@ import Resume from "../Resume";
 function Page({ currentPage }) {
     const renderPage = () => {
         switch (currentPage.name) {
-            case 'home':
+            case 'Home':
                 return <Home />;
-            case 'about':
+            case 'About':
                 return <About />;
-            case 'portfolio':
+            case 'Portfolio':
                 return <Portfolio />;
-            case 'contact':
+            case 'Contact':
                 return <Contact />;
-            case 'resume':
+            case 'Resume':
                 return <Resume />;
             default:
                 return <Home />;
@@ -26,7 +26,6 @@ function Page({ currentPage }) {
 
     return (
         <section>
-            <h2>{(currentPage.name)}</h2>
             <PageContent>{renderPage()}</PageContent>
         </section>
     );

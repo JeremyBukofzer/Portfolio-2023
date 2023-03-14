@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import React, { useState } from 'react';
 import Nav from './components/Nav';
@@ -6,19 +5,23 @@ import Footer from './components/Footer';
 import Header from './components/Header';
 import Page from './components/Page';
 
+
 function App() {
   const [pages] = useState([
     {
-      name: "about"
+      name: "Home"
     },
     {
-      name: "portfolio"
+      name: "About"
     },
     {
-      name: "contact"
+      name: "Projects"
     },
     {
-      name: "resume"
+      name: "Contact"
+    },
+    {
+      name: "Resume"
     },
   ]);
 
