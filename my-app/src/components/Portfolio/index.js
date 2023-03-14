@@ -11,10 +11,10 @@ function Portfolio() {
             desciption: "An endless scroll of fine art from some of the worlds top museums."
         },
         {
-            name: "",
-            link: "",
-            repository: "",
-            desciption: ""
+            name: "Encyclone",
+            link: "https://fierce-sands-41595.herokuapp.com/",
+            repository: "https://github.com/ddwk21/cyclone",
+            desciption: "A clean no-nonsense way to browse yuor favourite topics from Encyclopedia Britanica."
         },
         {
             name: "",
@@ -36,7 +36,7 @@ function Portfolio() {
                 {projects.map((project, id) => (
                     <Project
                         project={project}
-                        key={"prroject" + id}
+                        key={"project" + id}
                     />
                 ))}
             </div>

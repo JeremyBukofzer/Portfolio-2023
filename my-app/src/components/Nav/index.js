@@ -4,7 +4,6 @@ function Nav(props) {
     const {
         pages = [],
         setCurrentPage,
-        currentPage,
     } = props;
 
     return (
@@ -12,7 +11,7 @@ function Nav(props) {
             <ul className="nav-menu">
                 {pages.map((Page) => (
                     <li
-                    className="menu-item"
+                    className='menu-item'
                     key={Page.name}
                     >
                         <span onClick={() => setCurrentPage(Page)}

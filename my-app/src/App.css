@@ -1,24 +1,122 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
 body {
   background-color: rgb(31, 34, 36);
   font-family: 'Archivo Black', sans-serif;
 /* font-family: 'Passion One', cursive; */
-color: rgb(218, 218, 218)
+color: rgb(218, 218, 218);
 }
 
+
 .nav-menu {
-  width: 50vw;
-  display: flex;
-  text-align: center;
-  align-items: center;
+  max-width: 80%;
+  padding-left: 20%;
+  /* text-align: center;
+  align-items: center; */
+
+
 }
 
 .menu-item {
   display: inline;
   margin: 2em;
-
-  
+  cursor: pointer; 
 }
 
-.item-name {
-  text-decoration: none;
+.menu-item:hover {
+  color: rgb(203, 58, 111);
+  text-decoration: underline;
+
 }
+
+.intro-container {
+  text-align: center;
+  align-items: center;
+  margin-top: 20%;
+}
+
+.intro, .intro-subtext {
+  padding: 1em;
+}
+
+.view-work-btn {
+  cursor: pointer;
+  outline: 0;
+  display: inline-block;
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: center;
+  background-color: transparent;
+  border: 1px solid transparent;
+  padding: 6px 12px;
+  font-size: 1rem;
+  border-radius: .25rem;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  color: rgb(218, 218, 218);
+  border-color: rgb(218, 218, 218);
+}
+
+  .view-work-btn:hover {
+      color: rgb(31, 34, 36);
+      background-color:rgb(218, 218, 218);
+      border-color: rgb(218, 218, 218);
+  }
+
+  #contact-form {
+    width: 20em;
+    align-items: center;
+    justify-content: center;
+  }
+
+
+
+
+
+
