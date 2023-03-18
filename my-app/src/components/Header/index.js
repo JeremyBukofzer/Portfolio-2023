@@ -3,8 +3,8 @@ import React from 'react';
 function Header(props) {
 
   return (
-    <header className="flex-row space-between px-1">
-      <h1 className='header-title'>JB</h1>
+    <header className="">
+      
       
       {props.children}
     </header>

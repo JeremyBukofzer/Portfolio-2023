@@ -1,3 +1,4 @@
+
 import React, { useState } from "react";
 
 import { validateEmail } from "../../utils/helper";
@@ -6,11 +7,12 @@ function Contact() {
     const [formState, setFormState] = useState({
         name: '',
         email: '',
+        subject: '',
         message: '',
     });
 
     const [errMessage, setErrMessage] = useState('');
-    const { name, email, message} = formState;
+    const { name, email, subject, message} = formState;
 
     const handleSubmit = (event) => {
         event.preventDefault();
@@ -41,30 +43,44 @@ function Contact() {
     };
 
     return (
-        <section>
+        <section className="contact-container">
+            <h2 className="form-title">Contact Me</h2>
             <form id="contact-form" onSubmit={handleSubmit}>
                 <div>
-                    <label htmlFor="name">Name:</label>
+                    <label className="form-name" htmlFor="name"></label>
                     <input 
                     type="text"
                     name="name"
+                    placeholder="Name"
                     defaultvalue={name}
                     onBlur={handleChange}
                     />
                 </div>
                 <div>
-                    <label htmlFor="email">Email:</label>
+                    <label className="form-email" htmlFor="email"></label>
                     <input 
                     type="email"
                     name="email"
+                    placeholder="Email"
                     defaultvalue={email}
                     onBlur={handleChange}
                     />
                 </div>
                 <div>
-                    <label htmlFor="message">Message:</label>
+                    <label className="form-subject" htmlFor="subject"></label>
+                    <input 
+                    type="text"
+                    name="subject"
+                    placeholder="Subject"
+                    defaultvalue={subject}
+                    onBlur={handleChange}
+                    />
+                </div>
+                <div>
+                    <label className="form-message" htmlFor="message"></label>
                     <textarea
                     name="message"
+                    placeholder="Message"
                     rows="8"
                     defaultValue={message}
                     onBlur={handleChange}
@@ -75,7 +91,7 @@ function Contact() {
                         <p className="err-msg">{errMessage}</p>
                     </div>
                 )}
-                <button type="submit">Submit</button>
+                <button className="form-button" type="submit">Send Message</button>
 
             </form>
         </section>
