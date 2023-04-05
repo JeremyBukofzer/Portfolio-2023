@@ -8,35 +8,24 @@ function Portfolio() {
             name: "ArtHub",
             link: "https://ddwk21.github.io/art-hub/",
             repository: "https://github.com/ddwk21/art-hub",
-            desciption: "An endless scroll of fine art from some of the worlds top museums."
+            description: "An endless scroll of fine art from some of the worlds top museums."
         },
         {
             name: "Encyclone",
             link: "https://fierce-sands-41595.herokuapp.com/",
             repository: "https://github.com/ddwk21/cyclone",
-            desciption: "A clean no-nonsense way to browse yuor favourite topics from Encyclopedia Britanica."
+            description: "A clean no-nonsense way to browse yuor favourite topics from Encyclopedia Britanica."
         },
-        {
-            name: "",
-            link: "",
-            repository: "",
-            desciption: ""
-        },
-        {
-            name: "",
-            link: "",
-            repository: "",
-            desciption: ""
-        },
+        
     ])
 
     return (
         <div>
-            <div className="flex-row">
-                {projects.map((project, id) => (
+            <div className="">
+                {projects.map((project, idx) => (
                     <Project
                         project={project}
-                        key={"project" + id}
+                        key={"project" + idx}
                     />
                 ))}
             </div>

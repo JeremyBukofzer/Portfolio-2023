@@ -176,10 +176,24 @@ body {
 }
 /* Nav-bar styling ends here */
 
+/* Footer styling starts here */
+.footer-icons{
+  padding-top: 5em;
+  text-align: center;
+}
+.footer-icons a {
+  color: #474544;
+  padding: 1em;
+  
+}
+
+/* Footer styling ends here */
+
+/* home page styling starts here */
 .intro-container {
   text-align: center;
   align-items: center;
-  margin-top: 10%;
+  margin-top: 7%;
 }
 
 .intro,
@@ -215,17 +229,23 @@ body {
   background: #474544;
   color: #F2F3EB;
 }
-
+/* Home page styling ends here */
+/* ---------------------------------- */
+/* Contact form styling starts here */
 .contact-container {
   border: solid 3px #474544;
-  max-width: 768px;
-  margin: 60px auto;
+  max-width: 600px;
+  margin: 80px auto;
   position: relative;
 
 }
 
+::placeholder {
+  font-family:'Archivo Black', sans-serif;
+}
+
 form {
-  padding: 37.5px;
+  padding: 20px;
   margin: 50px 0;
 }
 
@@ -312,7 +332,6 @@ textarea {
   color: #474544;
   cursor: pointer;
   display: inline-block;
-  font-family: 'Helvetica', Arial, sans-serif;
   font-size: 0.875em;
   font-weight: bold;
   outline: none;
@@ -333,7 +352,7 @@ textarea {
 @media screen and (max-width: 768px) {
   .contact-container {
     margin: 20px auto;
-    width: 95%;
+    width: 80%;
   }
 }
 
@@ -359,3 +378,7 @@ textarea {
     font-size: 0.875em;
   }
 }
+/* Contact form styling ends here */
+
+/* Resume styling starts here */
+
