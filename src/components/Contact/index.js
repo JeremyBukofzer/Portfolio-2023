@@ -27,15 +27,15 @@ export const Contact = () => {
         <section className="contact-container">
             <h2 className="form-title">Contact Me</h2>
             <form className='form-container' ref={form} onSubmit={sendEmail}>
-      <label>Name</label>
+      <label className='form-name'>Name</label>
       <input type="text" name="user_name" />
-      <label>Email</label>
+      <label className='form-email'>Email</label>
       <input type="email" name="user_email" />
-      <label>Subject</label>
+      <label className='form subject'>Subject</label>
       <input type="text" name="subject" />
-      <label>Message</label>
+      <label className='form-message'>Message</label>
       <textarea name="message" />
-      <input type="submit" value="Send" />
+      <input className='form-button' type="submit" value="Send" />
     </form>
         </section>
     );
