@@ -1,99 +1,42 @@
+import React, { useRef } from 'react';
+import emailjs from '@emailjs/browser';
 
-import React, { useState } from "react";
+export const Contact = () => {
+  const form = useRef();
 
-import { validateEmail } from "../../utils/helper";
+  const sendEmail = (e) => {
+    e.preventDefault();
 
-function Contact() {
-    const [formState, setFormState] = useState({
-        name: '',
-        email: '',
-        subject: '',
-        message: '',
-    });
+  const serviceID = process.env.REACT_APP_SERVICE_ID;
+  const templateID = process.env.REACT_APP_TERMPLATE_ID;
+  const publicKey = process.env.REACT_APP_PUBLIC_KEY
 
-    const [errMessage, setErrMessage] = useState('');
-    const { name, email, subject, message} = formState;
-
-    const handleSubmit = (event) => {
-        event.preventDefault();
-        if (!errMessage) {
-            console.log('Submit Form', formState);
-        }
-    };
-
-    const handleChange = (event) => {
-        if (event.target.name === 'email') {
-            const isValid = validateEmail(event.target.value);
-            if (!isValid) {
-                setErrMessage("Not a valid Email.");
-            } else {
-                setErrMessage('');
-            }
-        } else {
-            if (!event.target.value.length) {
-                setErrMessage(`${event.target.name} required.`);
-            } else {
-                setErrMessage('');
-            }
-        }
-        if (!errMessage) {
-            setFormState({ ...formState, [event.target.name]: event.target.value });
-            console.log('Handle Form', formState);
-        }
-    };
-
+    emailjs.sendForm(
+        serviceID, 
+        templateID, 
+        form.current,
+         publicKey)
+      .then((result) => {
+          console.log(result.text);
+          console.log('Message Sent!')
+      }, (error) => {
+          console.log(error.text);
+      });
+  };
     return (
         <section className="contact-container">
             <h2 className="form-title">Contact Me</h2>
-            <form id="contact-form" onSubmit={handleSubmit}>
-                <div>
-                    <label className="form-name" htmlFor="name"></label>
-                    <input 
-                    type="text"
-                    name="name"
-                    placeholder="Name"
-                    defaultvalue={name}
-                    onBlur={handleChange}
-                    />
-                </div>
-                <div>
-                    <label className="form-email" htmlFor="email"></label>
-                    <input 
-                    type="email"
-                    name="email"
-                    placeholder="Email"
-                    defaultvalue={email}
-                    onBlur={handleChange}
-                    />
-                </div>
-                <div>
-                    <label className="form-subject" htmlFor="subject"></label>
-                    <input 
-                    type="text"
-                    name="subject"
-                    placeholder="Subject"
-                    defaultvalue={subject}
-                    onBlur={handleChange}
-                    />
-                </div>
-                <div>
-                    <label className="form-message" htmlFor="message"></label>
-                    <textarea
-                    name="message"
-                    placeholder="Message"
-                    rows="8"
-                    defaultValue={message}
-                    onBlur={handleChange}
-                    />
-                </div>
-                {errMessage && (
-                    <div>
-                        <p className="err-msg">{errMessage}</p>
-                    </div>
-                )}
-                <button className="form-button" type="submit">Send Message</button>
-
-            </form>
+            <form className='form-container' ref={form} onSubmit={sendEmail}>
+      <label>Name</label>
+      <input type="text" name="user_name" />
+      <label>Email</label>
+      <input type="email" name="user_email" />
+      <label>Subject</label>
+      <input type="text" name="subject" />
+      <label>Message</label>
+      <textarea name="message" />
+      <input type="submit" value="Send" />
+    </form>
         </section>
     );
 }
