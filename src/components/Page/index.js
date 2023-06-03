@@ -2,9 +2,10 @@ import React from "react";
 import PageContent from "../PageContent";
 import Home from "../Home";
 import About from "../About";
-import Portfolio from "../Portfolio";
+import Projects from "../Projects";
 import Contact from "../Contact";
 import Resume from "../Resume";
+
 
 function Page({ currentPage }) {
     const renderPage = () => {
@@ -13,8 +14,8 @@ function Page({ currentPage }) {
                 return <Home />;
             case 'About':
                 return <About />;
-            case 'Portfolio':
-                return <Portfolio />;
+            case 'Projects':
+                return <Projects />;
             case 'Contact':
                 return <Contact />;
             case 'Resume':
