@@ -1,21 +1,21 @@
 import React, { useRef } from 'react';
 import emailjs from '@emailjs/browser';
 
-export const Contact = () => {
+const Contact = () => {
   const form = useRef();
 
-  const sendEmail = (e) => {
-    e.preventDefault();
+  const sendEmail = (event) => {
+    event.preventDefault();
 
-  const serviceID = process.env.REACT_APP_SERVICE_ID;
-  const templateID = process.env.REACT_APP_TERMPLATE_ID;
-  const publicKey = process.env.REACT_APP_PUBLIC_KEY
+  // const serviceID = process.env.REACT_APP_SERVICE_ID;
+  // const templateID = process.env.REACT_APP_TERMPLATE_ID;
+  // const publicKey = process.env.REACT_APP_PUBLIC_KEY;
 
     emailjs.sendForm(
-        serviceID, 
-        templateID, 
+      'service_u4b4an4', 
+      'template_uit8gmz', 
         form.current,
-         publicKey)
+        'PebPb8uxonbUdZWuz')
       .then((result) => {
           console.log(result.text);
           console.log('Message Sent!')
