@@ -5,7 +5,7 @@ function Home() {
         <div className="intro-container">
             <h1 className="intro">Hello, I'm <span className="intro-name">Jeremy</span>.</h1>
             <h2 className="intro-subtext">I am a full stack web developer.</h2>
-            <button className="view-work-btn" href="/Project">View my work</button>
+            {/* <button className="view-work-btn" href="./Projects">View my work</button> */}
         </div>
     )
 }

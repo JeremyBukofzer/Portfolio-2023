@@ -7,9 +7,7 @@ const Contact = () => {
   const sendEmail = (event) => {
     event.preventDefault();
 
-  // const serviceID = process.env.REACT_APP_SERVICE_ID;
-  // const templateID = process.env.REACT_APP_TERMPLATE_ID;
-  // const publicKey = process.env.REACT_APP_PUBLIC_KEY;
+
 
     emailjs.sendForm(
       'service_u4b4an4', 
@@ -19,6 +17,7 @@ const Contact = () => {
       .then((result) => {
           console.log(result.text);
           console.log('Message Sent!')
+          alert("Your Message Was Sent!")
       }, (error) => {
           console.log(error.text);
       });

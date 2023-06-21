@@ -142,6 +142,7 @@ body {
   text-transform: uppercase;
 }
 
+/* ---------------------------------- */
 /* Nav-bar styling starts here */
 .nav-menu {
   max-width: 80%;
@@ -174,21 +175,23 @@ body {
   transition: all 0.3s;
 
 }
-/* Nav-bar styling ends here */
 
+/* Nav-bar styling ends here */
+/* ---------------------------------- */
 /* Footer styling starts here */
-.footer-icons{
+.footer-icons {
   padding-top: 5em;
   text-align: center;
 }
+
 .footer-icons a {
   color: #474544;
   padding: 1em;
-  
+
 }
 
 /* Footer styling ends here */
-
+/* ---------------------------------- */
 /* home page styling starts here */
 .intro-container {
   text-align: center;
@@ -229,6 +232,7 @@ body {
   background: #474544;
   color: #F2F3EB;
 }
+
 /* Home page styling ends here */
 /* ---------------------------------- */
 /* Contact form styling starts here */
@@ -241,7 +245,7 @@ body {
 }
 
 ::placeholder {
-  font-family:'Archivo Black', sans-serif;
+  font-family: 'Archivo Black', sans-serif;
 }
 
 form {
@@ -378,7 +382,24 @@ textarea {
     font-size: 0.875em;
   }
 }
-/* Contact form styling ends here */
 
-/* Resume styling starts here */
+/* Contact form styling ends here */
+/* ---------------------------------- */
+/* Projects styling starts here*/
+
+
+
+
+
+
+
+
+/* Projects styling ends here*/
+/* ---------------------------------- */
+/* About styling starts here*/
+
+.about {
+
+  margin: 10%;
+}
 
