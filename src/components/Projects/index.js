@@ -1,6 +1,6 @@
 import React from "react";
-import arthubLogo from "/Users/jeremybukofzer/Desktop/Jeremy-Bukofzer-Portfolio/my-app/src/assets/Images/art-hub-logo-ticket.png"
-import encyclonLogo from "/Users/jeremybukofzer/Desktop/Jeremy-Bukofzer-Portfolio/my-app/src/assets/Images/encyclone-logo.png"
+import arthubLogo from "./Images/art-hub-logo-ticket.png"
+import encyclonLogo from "./Images/encyclone-logo.png"
 
 
 function Projects() {
