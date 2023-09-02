@@ -388,20 +388,75 @@ textarea {
 /* ---------------------------------- */
 /* Projects styling starts here*/
 
-.projects-container {
-  display: inline;
-
+.project-title {
+  margin-top: 2%;
+  text-align: center;
+font-size: 2em;
+font-weight: 900;
 }
 
-.arthub-logo, .encyclone-logo {
-  max-width: 20em;
+.project-container {
+  margin-top: 2em;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  height: 100vh;
+  width:100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-
+.card {
+  margin:4em;
+  height:18em;
+  width:14em;
+  display:-webkit-box;
+  display:-ms-flexbox;
+  display:flex;
+  -webkit-box-orient:vertical;
+  -webkit-box-direction:normal;
+  -ms-flex-direction:column;
+  flex-direction:column;
+  position:relative;
+  -webkit-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -o-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  border-radius:16px;
+  overflow:hidden;
+  -webkit-box-shadow:  15px 15px 27px #e1e1e3, -15px -15px 27px #ffffff;
+  box-shadow:  15px 15px 27px #e1e1e3, -15px -15px 27px #ffffff;
 }
 
 
+.logo {
+height: fit-content;
 
+ top: 0px;
+ -webkit-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -o-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 
+.card-content {
+  height:12em;
+  width:14em;
+  position:absolute;
+  bottom:0em;
+  -webkit-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -o-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  padding: 0.5em 1em;
+  text-align:center;
+  visibility: hidden;
+}
+
+.card:hover
+.card-content {
+visibility: visible;
+
+}
 
 
 
@@ -415,8 +470,8 @@ font-size: 2em;
 font-weight: 900;
 }
 .portrait {
-  width: 25%;
-  margin-left: 37.5%;
+  width: 20%;
+  margin-left: 40%;
   
 }
 
